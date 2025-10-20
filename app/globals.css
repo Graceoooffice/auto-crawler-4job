@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased text-gray-800;
+  }
+  ::selection {
+    background-color: #dbeafe;
+    color: #1e293b;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/90 backdrop-blur-sm border border-gray-200 rounded-xl shadow-sm;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center px-3 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-600;
+  }
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-800 hover:bg-gray-200 focus:ring-gray-300;
+  }
+  .input {
+    @apply w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500;
+  }
+  .section-title {
+    @apply text-2xl font-bold text-gray-900;
+  }
+}
+
+/* CV预览样式 */
+.cv-preview h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 0.5rem;
+}
+
+.cv-preview h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+}
+
+.cv-preview h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.cv-preview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.cv-preview ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.cv-preview li {
+  margin-bottom: 0.25rem;
+  list-style-type: disc;
+}
+
+.cv-preview strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* 滚动条样式 */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
